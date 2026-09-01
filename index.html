@@ -114,11 +114,9 @@
           return;
         }
 
-        // Over 75 + Medicare No (disqualified): keep all params except clickid/rtkcid
-        if (params.get("qualified") === "no" && params.get("age") === "80") {
-          params.delete("clickid");
-          params.delete("rtkcid");
-        }
+        // Medicare No (Claim Now): keep all params except clickid/rtkcid
+        params.delete("clickid");
+        params.delete("rtkcid");
 
         var q = params.toString();
         window.location.href =
