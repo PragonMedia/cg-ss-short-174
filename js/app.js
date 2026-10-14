@@ -686,9 +686,8 @@ $("button.chat-button").on("click", function () {
       newUrl.searchParams.set("qualified", "yes");
     } else if (buttonValue == "No") {
       $("#msg_no_q3").removeClass("hidden");
-
-      newUrl.searchParams.delete("qualified");
-      newUrl.searchParams.set("qualified", "no");
+      window.location.href = "https://nationalcareoptions.com/lp/param-aca";
+      return;
     }
 
     // Yes: load CallGrid phone before reveal. No: Claim Now only (skip phone).
